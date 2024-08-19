@@ -1,15 +1,15 @@
 <script>
   import { Router, Route, Link } from 'svelte-routing';
-  import lobye from './routers/lobye.svelte';
-/*   import About from './About.svelte'; */
+  import Lobye from './routers/lobye.svelte';
+  import Front from './routers/front.svelte';
 </script>
 
 <Router>
   <nav>
     <Link to="/"></Link>
-<!--   <Link to="/about">Sobre Nosotros</Link> -->
+ <Link to="/front"></Link> 
   </nav>
 
-  <Route path="/" component={lobye} />
- <!--  <Route path="/about" component={About} /> -->
+  <Route path="/" component={Lobye} />
+  <Route path="/front" component={Front} /> 
 </Router>

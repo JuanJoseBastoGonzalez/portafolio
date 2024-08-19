@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --black: #000000;
+    /* negro */
+    --withe: #ffffff;
+    /* blanco */
+    --accent-color: #e74c3c;
+    /* Rojo */
+    --background-color: #f5f5f5;
+    /* Gris claro */
+    --text-color: #333;
+    /* Gris oscuro */
+}
+
+.clwithe {
+    color: var(--withe);
+}
+
+.bgrblack {
+    background-color: var(--black);
+}
+
+.dnone {
+    display: none;
+}
+
+.fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galingc {
+    display: grid;
+    align-items: center;
+}
+
+.gcc {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.gjustifya {
+    display: grid;
+    justify-content: space-around;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+.fc {
+    display: flex;
+    justify-content: center;
+}
+
+.fs2 {
+    font-size: 2rem;
+}
+
+.tduration2 {
+    transition-duration: 2s;
+}
+
+.pabsolute {
+    position: absolute;
+}
+
+.bgrnorepeat {
+    background-repeat: no-repeat;
+}
+
+.h100vh {
+    height: 100vh;
+}
+
+.gcolumns3 {
+    grid-template-columns: 33% 33% 34%;
+}
+
+.w100cent {
+    width: 100%;
+}
