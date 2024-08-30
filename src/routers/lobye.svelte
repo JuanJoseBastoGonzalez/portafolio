@@ -11,6 +11,20 @@
   </p> -->
 
 <script lang="ts">
+
+import { audioControl } from '../stores/audioStore';
+
+// Variable para suscribirte al estado del audio
+let isPlaying;
+audioControl.subscribe(value => {
+    isPlaying = value.isPlaying;
+});
+
+// Función para reproducir el audio
+function playAudio() {
+    audioControl.play();
+}
+
   import { Link } from "svelte-routing";
   import Navbar from "../components/navbar.svelte";
   import Footer from "../components/footer.svelte";
@@ -30,10 +44,11 @@
 </script>
 
 <Navbar />
-<div class="body h100vh gcc bgrnorepeat gcolumns3">
+<div class="body h100vh gcc bgrnorepeat gcolumns3"  >
   <Link to="/front">
-    <div class="section bgrblack w100cent tduration2 h100vh fcc">
-      <div class="dnone cp clwithe" on:click={toggFron}>FRONT</div>
+    <div class="section bgrblack w100cent tduration2 h100vh fcc"on:click={playAudio}>
+
+      <div class="dnone cp clwithe"  >FRONT</div>
     </div>
   </Link>
   <div class="section bgrblack w100cent tduration2 h100vh fcc">
