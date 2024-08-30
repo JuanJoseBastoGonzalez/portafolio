@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 // Reemplaza 'nombre-repo' con el nombre de tu repositorio
-const base = '/nombre-repo/';
+const base = '/';
 
 export default defineConfig({
   plugins: [svelte()],
