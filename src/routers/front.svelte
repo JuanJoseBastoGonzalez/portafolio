@@ -5,7 +5,7 @@
     import Carts from "../components/carts.svelte";
     </script>
     <Navbar/>
-    <div class="bodyf">
+    <div class="bodyf g">
     <div>
         <div class="view"><Carts/></div>
         <div class="view"><Carts/></div>
@@ -34,7 +34,7 @@
     margin-bottom: 3rem;
     }
     .bodyf{
-        display: grid;
+      /*   display: grid; */
         /* align-items: center; */
         grid-template-columns: 50% 50%;
         height: 100%;

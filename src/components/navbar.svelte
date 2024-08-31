@@ -2,30 +2,35 @@
 <script>
   import { Link } from 'svelte-routing';
   import { audioControl } from '../stores/audioStore';
+  import { audio2Control } from '../stores/audioStore';
 
 // Variable para suscribirte al estado del audio
 let isPlaying;
 audioControl.subscribe(value => {
     isPlaying = value.isPlaying;
 });
+audio2Control.subscribe(value => {
+    isPlaying = value.isPlaying;
+});
 
 // Función para reproducir el audio
 function pauseAudio() {
     audioControl.pause();
+    audio2Control.pause2();
 }
 </script>
 
-<div class="navbar clwithe w100cent gcolumns3 pabsolute tduration2 galingc">
-  <div on:click={pauseAudio}><Link to="/">HOME</Link></div>
+<div class="navbar m0 clwithe w100cent gcolumns3 pabsolute tduration2 galingc">
+ <Link to="/"> <div on:click={pauseAudio} class="tdnone clwithe">HOME</div></Link>
   <div class="fcc">
     <section>
-      <a class="animated-line clwithe bgrnorepeat cp fs2">Izquierda</a>
+      <a class="animated-line tdnone clwithe bgrnorepeat cp fs2">Izquierda</a>
     </section>
     <section>
-      <a class="animated-line clwithe bgrnorepeat cp fs2">Centro</a>
+      <a class="animated-line tdnone clwithe bgrnorepeat cp fs2">Centro</a>
     </section>
     <section>
-      <a class="animated-line clwithe bgrnorepeat cp fs2">Derecha</a>
+      <a class="animated-line tdnone clwithe bgrnorepeat cp fs2">Derecha</a>
     </section>
   </div>
   <div class="menu">MENU</div>
@@ -33,7 +38,7 @@ function pauseAudio() {
 
 <style lang="less">
   .navbar {
-    margin: 0;
+   /*  margin: 0; */
     padding: 0;
     height: 8vh;
     background: rgba(0, 0, 0, 0.353);
@@ -67,7 +72,7 @@ function pauseAudio() {
   .animated-line {
     margin: 10px 30px;
     background-image: linear-gradient(90deg, #62aeff, #ff0468, #af4ffe);
-    text-decoration: none;
+   /*  text-decoration: none; */
     font-weight: bold;
     background-size: 0% 2px;
     background-position: left bottom;
@@ -77,4 +82,5 @@ function pauseAudio() {
   .animated-line:hover {
     background-size: 100% 2px;
   }
+ 
 </style>

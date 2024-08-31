@@ -1,24 +1,29 @@
 <script>
 </script>
 
-<div class="gjustifya clwithe bgrblack w100cent footer gcolumns3">
-    <div>
-        <p>Enlaces Rápidos:</p>
-        <p>Inicio</p>
-        <p>Sobre Nosotros</p>
-        <p>Servicios</p>
-        <p>Contacto</p>
+<div class="gjustifya clwithe bgrblack w100cent footer gcolumns3 ">
+    <div class="gm">
+        <h2>Mision:</h2>
+        <div class="jt">
+        <p>Diseñar y desarrollar soluciones de software innovadoras que resuelvan problemas complejos y mejoren la vida de los usuarios. Me comprometo a escribir código limpio y mantenible, colaborar eficazmente con equipos multidisciplinarios y aprender continuamente nuevas tecnologías para mantenerme al día con las mejores prácticas de la industria.</p>
+     </div>
     </div>
-    <div>
-        <p>Información Legal:</p>
-        <p>Política de Privacidad</p>
-        <p>Términos de Servicio</p>
+    <div class="gm">
+        <h2>Vision:</h2>
+        <div class="jt">
+        <p>Ser reconocido como un líder en la comunidad de desarrolladores, contribuyendo a proyectos que transformen la tecnología y la sociedad. Aspiro a impulsar la evolución de la tecnología mediante el desarrollo de herramientas y aplicaciones que potencien la creatividad y la productividad, y fomentar un entorno de programación inclusivo y colaborativo</p>
+      </div>
     </div>
-    <div>
-        <p>Redes Sociales:</p>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Instagram</p>
+    <div  class="gm">
+        <h2>Objetivos profesionales:</h2>
+<div class="jt">
+        <p>° Mejorar habilidades en lenguajes de programación relevantes.
+        </p>
+        <p>° Mantenerse actualizado con las últimas tecnologías y herramientas.
+        </p>
+        <p>° Mejorar habilidades en resolución de problemas y depuración.
+        </p>
+</div>
     </div>
 </div>
 
@@ -31,5 +36,8 @@
         /*       display: grid;
         justify-content: space-around; */
         /*    grid-template-columns: 33% 33% 34%; */
+    }
+    .gm{
+        margin: 1rem;
     }
 </style>

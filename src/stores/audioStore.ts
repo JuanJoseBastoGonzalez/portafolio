@@ -10,7 +10,7 @@ const audioStore = writable({
 });
 
 // Segundo audio
-const audio2 = new Audio('/assets/tu_audio2.m4a'); // Reemplaza con la ruta de tu segundo archivo de audio
+const audio2 = new Audio('/assets/whatthehell.m4a'); // Reemplaza con la ruta de tu segundo archivo de audio
 audio2.loop = true;
 
 const audio2Store = writable({
@@ -29,6 +29,7 @@ const audio3Store = writable({
 
 // Funciones para controlar el primer audio
 function play() {
+    audio.volume=0.1;
     audio.play();
     audioStore.update(state => ({ ...state, isPlaying: true }));
 }
@@ -42,6 +43,7 @@ audio.currentTime=0;
 function toggle() {
     if (audio.paused) {
         play();
+        
     } else {
         pause();
     }
@@ -55,12 +57,14 @@ function reset() {
 
 // Funciones para controlar el segundo audio
 function play2() {
+    audio2.volume=0.2;
     audio2.play();
     audio2Store.update(state => ({ ...state, isPlaying: true }));
 }
 
 function pause2() {
     audio2.pause();
+    audio2.currentTime=0;
     audio2Store.update(state => ({ ...state, isPlaying: false }));
 }
 
